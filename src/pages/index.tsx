@@ -1,5 +1,5 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import PokemonFilter from "@container/PokemonFilter";
+import PokemonFilter from "@container/PokemonTable";
 import type { NextPageWithLayout } from "@pages/_app";
 import Head from "next/head";
 import Layout from "@components/layout";

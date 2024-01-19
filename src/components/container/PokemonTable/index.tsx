@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, PropsWithChildren } from "react";
 
-import PokemonFilter from "@container/PokemonFilter/components/Filters";
-import PokemonCards from "@container/PokemonFilter/components/Cards";
+import PokemonFilter from "@container/PokemonTable/components/Filters";
+import PokemonCards from "@container/PokemonTable/components/Cards";
 import FilterProvider from "./Provider/FilterProvider";
 import ErrorBanner from "@common/ErrorBanner";
 import Shimmer from "@/components/common/Shimmer";

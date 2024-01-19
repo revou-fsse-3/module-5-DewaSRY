@@ -1,6 +1,6 @@
 import { FC, ButtonHTMLAttributes, PropsWithChildren, Fragment } from "react";
 import Button, { ButtonTypes } from "@common/Button";
-import useFilterPokemon from "@container/PokemonFilter/Provider/useFilterPokemon";
+import useFilterPokemon from "@container/PokemonTable/Provider/useFilterPokemon";
 import useFavorite from "@/features/store/StateFavoritePokemon";
 import { FetchPokemonByName } from "@libs/pokemon";
 interface ButtonFavoriteProps extends ButtonHTMLAttributes<HTMLButtonElement> {}

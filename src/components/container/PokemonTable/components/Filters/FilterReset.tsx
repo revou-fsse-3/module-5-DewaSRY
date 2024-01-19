@@ -1,6 +1,6 @@
 import { FC, ButtonHTMLAttributes, PropsWithChildren } from "react";
 import Button from "@common/Button";
-import useFilterPokemon from "@container/PokemonFilter/Provider/useFilterPokemon";
+import useFilterPokemon from "@container/PokemonTable/Provider/useFilterPokemon";
 interface ButtonResetProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 type ButtonResetComponents = FC<ButtonResetProps> & PropsWithChildren;
 const ButtonReset: ButtonResetComponents = ({ children, ...resProps }) => {

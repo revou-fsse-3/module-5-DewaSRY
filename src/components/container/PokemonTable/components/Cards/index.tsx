@@ -1,5 +1,5 @@
 import { FC, Fragment, HTMLAttributes, PropsWithChildren } from "react";
-import useFilterPokemon from "@container/PokemonFilter/Provider/useFilterPokemon";
+import useFilterPokemon from "@container/PokemonTable/Provider/useFilterPokemon";
 import PokemonCard from "./Card";
 import CardsWrapper from "./CardsWrapper";
 
