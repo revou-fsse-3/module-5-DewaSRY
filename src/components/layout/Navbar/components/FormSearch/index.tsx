@@ -1,8 +1,8 @@
 import { FC, FormHTMLAttributes, PropsWithChildren } from "react";
-import PokemonInput from "@container/SearchPokemon/components/PokemonInput";
-import SearchButton from "@container/SearchPokemon/components/SearchButton";
-import SearchProvider from "@container/SearchPokemon/provider";
-import DropDown from "@container/SearchPokemon/components/DropDown";
+import PokemonInput from "@layout/Navbar/components/PokemonInput";
+import SearchButton from "@layout/Navbar/components/SearchButton";
+import DropDown from "@layout/Navbar/components/DropDown";
+import SearchProvider from "@layout/Navbar/provider";
 
 interface indexProps extends FormHTMLAttributes<HTMLFormElement> {}
 type indexComponents = FC<indexProps> & PropsWithChildren;

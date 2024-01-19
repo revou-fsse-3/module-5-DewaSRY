@@ -2,7 +2,6 @@ import { FC, ButtonHTMLAttributes, PropsWithChildren } from "react";
 import Button from "@common/Button";
 import { filterPokemonType, PokemonType } from "@libs/pokemon/PokemonType";
 import useFilterPokemon from "@container/PokemonFilter/Provider/useFilterPokemon";
-import usePokemon from "@/features/store/StatePokemon";
 interface ButtonFilterProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   pokemonType: PokemonType;
 }
@@ -12,8 +11,7 @@ const ButtonFilter: ButtonFilterComponents = ({
   pokemonType,
   ...resProps
 }) => {
-  const { setFilterPokemon, type } = useFilterPokemon();
-  const { allPokemon } = usePokemon();
+  const { setFilterPokemon, type, allPokemon } = useFilterPokemon();
   const pokemonTypeArr = filterPokemonType(allPokemon, pokemonType);
   const handleSetPokemon = () => {
     setFilterPokemon(pokemonTypeArr, pokemonType);

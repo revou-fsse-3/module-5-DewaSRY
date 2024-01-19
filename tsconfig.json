@@ -15,10 +15,12 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
+      "@pages/*": ["./src/pages/*"],
       //logic
       "@features/*": ["./src/features/*"],
       "@utils/*": ["./src/features/utils/*"],
       "@libs/*": ["./src/features/libs/*"],
+      "@hooks/*": ["./src/features/hooks/*"],
       //components
       "@components/*": ["./src/components/*"],
       "@container/*": ["./src/components//container/*"],

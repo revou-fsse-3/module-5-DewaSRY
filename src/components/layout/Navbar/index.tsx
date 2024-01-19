@@ -1,7 +1,10 @@
-import { FC, Fragment, HTMLAttributes } from "react";
-import SearchPokemon from "@container/SearchPokemon/components/FormSearch";
+import { FC, HTMLAttributes } from "react";
+import FormSearch from "@layout/Navbar/components/FormSearch";
 import Link from "next/link";
+import Image from "next/image";
+import Navbar from "@layout/Navbar";
 interface indexProps extends HTMLAttributes<HTMLElement> {}
+
 type indexComponents = FC<indexProps>;
 const index: indexComponents = ({ ...resProps }) => {
   return (
@@ -15,15 +18,16 @@ const index: indexComponents = ({ ...resProps }) => {
       }
     >
       <Link href="/" className="w-[250px] xl:flex-1 ">
-        <img
+        <Image
+          width={150}
           className="h-[75px] inline-block  "
           height={50}
-          src="/src/assets/Pokédex_logo.png"
+          src="/Pokédex_logo.png"
           alt=""
         />
       </Link>
       <div className="h-full py-4 min-w-[600px] flex-1 xl:flex-[3] ">
-        <SearchPokemon className=" " />
+        <FormSearch />
       </div>
     </nav>
   );

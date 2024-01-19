@@ -4,7 +4,6 @@ import {
   NextPage,
 } from "next";
 
-import QueryProvider from "@features/Query";
 import PokemonCard from "@container/PokemonCard";
 interface PokemonProps {
   pokemonName: string;
@@ -13,7 +12,6 @@ export const getServerSideProps: GetServerSideProps<PokemonProps> = async (
   context
 ) => {
   const pokemonName = context.params!["name"] as string;
-  console.log(pokemonName);
   try {
     return {
       props: {
@@ -31,9 +29,7 @@ type PokemonComponent = InferGetServerSidePropsType<typeof getServerSideProps>;
 const Pokemon: NextPage<PokemonComponent> = ({ pokemonName }) => {
   return (
     <>
-      <QueryProvider>
-        <PokemonCard pokemonName={pokemonName} />
-      </QueryProvider>
+      <PokemonCard pokemonName={pokemonName} />
     </>
   );
 };

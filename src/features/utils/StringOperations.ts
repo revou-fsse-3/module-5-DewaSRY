@@ -28,9 +28,18 @@ function getCleanForward(str: string): string {
 function getStringCamelChaseToLabel(str: string) {
   return getUpperCHaseStringAfterSpace(getStringCamelCaseHaveSpaces(str));
 }
+
+function stringComparator(stringOne: string, stringTwo: string) {
+  return (
+    stringOne.toLocaleLowerCase().trim() ===
+    stringTwo.toLocaleLowerCase().trim()
+  );
+}
+
 export {
   getStringCamelCaseHaveSpaces,
   getStringCamelChaseToLabel,
   getUpperCHaseStringAfterSpace,
   getCleanForward,
+  stringComparator,
 };

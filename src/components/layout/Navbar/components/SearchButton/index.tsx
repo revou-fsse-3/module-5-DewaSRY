@@ -1,7 +1,6 @@
 import Button, { ButtonTypes } from "@common/Button";
 import { CiSearch } from "react-icons/ci";
-import useSearch from "@container/SearchPokemon/provider/useSearch";
-// import { useNavigate } from "react-router-dom";
+import useSearch from "@layout/Navbar/provider/useSearch";
 import { useRouter } from "next/router";
 import { ButtonHTMLAttributes, FC } from "react";
 

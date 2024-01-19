@@ -1,7 +1,7 @@
 import { FC, InputHTMLAttributes, useEffect } from "react";
-import usePokemonSearch from "@container/SearchPokemon/provider/useSearch";
-import useDebounce from "@/features/hooks/useDebounce";
-import useOnChangeInput from "@/features/hooks/useOnChangeInput";
+import usePokemonSearch from "@layout/Navbar/provider/useSearch";
+import useDebounce from "@hooks/useDebounce";
+import useOnChangeInput from "@hooks/useOnChangeInput";
 import Input from "@common/FormsUtils/Input";
 interface PokemonInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;

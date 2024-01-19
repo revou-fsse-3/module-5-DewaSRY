@@ -18,7 +18,7 @@ const CardDisplay: CardDisplayComponents = ({ pokemon, ...resProps }) => {
         className="w-[300px] h-[300px]  bg-card   "
         pokemon={pokemon}
       />
-      <Link href={"/pokemon/" + pokemon.name} title={pokemon.name}>
+      <Link passHref href={"/pokemon/" + pokemon.name} title={pokemon.name}>
         <PokemonTitle pokemon={pokemon} />
       </Link>
       <PokemonType pokemon={pokemon} className="text-lg" />

@@ -5,25 +5,16 @@ import PokemonBMI from "@container/PokemonCard/components/PokemonBMI";
 import PokemonImg from "@ui/PokemonImg";
 import PokemonTitle from "@ui/PokemonTitle";
 import PokemonType from "@ui/pokemonType";
-import type { GetPokemonProps } from "@libs/pokemon/GetPokemon";
-import ErrorFetching from "@libs/Error";
-import { useQuery } from "@tanstack/react-query";
-import { GetPokemon } from "@libs/pokemon";
-import ErrorBanner from "./components/ErrorBanner";
+import ErrorBanner from "@common/ErrorBanner";
 import Shimmer from "@/components/common/Shimmer";
+import QueryPokemon from "@features/Query/QueryPokemon";
+
 interface indexProps extends HTMLAttributes<HTMLDivElement> {
   pokemonName: string;
 }
 type indexComponents = FC<indexProps>;
 const index: indexComponents = ({ pokemonName }) => {
-  const {
-    data: pokemon,
-    isLoading,
-    error,
-  } = useQuery<GetPokemonProps, ErrorFetching>({
-    queryKey: ["pokemon"],
-    queryFn: () => GetPokemon(pokemonName),
-  });
+  const { data: pokemon, isLoading, error } = QueryPokemon(pokemonName);
   return (
     <Fragment>
       {pokemon && (

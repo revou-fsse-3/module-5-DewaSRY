@@ -13,8 +13,6 @@ export default async function GetPokemon(
   if (pokemon) return pokemon;
   try {
     pokemon = await fetchPokemon(POKEMON_URL, signal);
-    console.log(pokemon);
-    console.log("testing ");
     await addDocument(POKEMON_URL, pokemon);
     return pokemon;
   } catch (error) {

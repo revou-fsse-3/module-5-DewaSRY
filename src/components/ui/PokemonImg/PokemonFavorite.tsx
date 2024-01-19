@@ -3,19 +3,27 @@ import Button, { ButtonTypes } from "@common/Button";
 import useFilterPokemon from "@/features/store/StateFavoritePokemon";
 import { GetPokemonProps } from "@libs/pokemon/GetPokemon";
 import StartWrapper from "./StartWrapper";
+import { stringComparator } from "@features/utils/StringOperations";
 interface indexProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   pokemon: GetPokemonProps;
 }
 type indexComponents = FC<indexProps> & PropsWithChildren;
 const index: indexComponents = ({ pokemon, ...resProps }) => {
-  const { addPokemonFavorite, favoritePokemonNames } = useFilterPokemon();
-  let isFavorite = favoritePokemonNames.find((p) => p.name === pokemon.name)
+  const { addPokemonFavorite, favoritePokemonNames, removePokemonFavorite } =
+    useFilterPokemon();
+
+  let isFavorite = favoritePokemonNames.find((p) =>
+    stringComparator(p.name, pokemon.name)
+  )
     ? true
     : false;
 
   const handleClick = () => {
-    addPokemonFavorite(pokemon.name);
-    isFavorite = true;
+    let favoriteHandle = addPokemonFavorite;
+    if (isFavorite) {
+      favoriteHandle = removePokemonFavorite;
+    }
+    favoriteHandle(pokemon.name);
   };
   return (
     <Button
