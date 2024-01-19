@@ -6,7 +6,7 @@ const CardsWrapper: CardsWrapperComponents = ({ children, ...resProps }) => {
   return (
     <div
       {...resProps}
-      className=" grid grid-cols-pokemon-table max-w-[2000px] gap-x-4 gap-y-8  px-6 py-10 lg:mx-auto place-content-center"
+      className=" grid grid-cols-pokemon-table max-w-[2000px] gap-x-4 gap-y-8 py-10 lg:mx-auto place-content-center"
     >
       {children}
     </div>

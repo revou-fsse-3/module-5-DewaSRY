@@ -25,7 +25,7 @@ const ButtonFilter: ButtonFilterComponents = ({
           onClick={handleSetPokemon}
           className={`${resProps.className ? resProps.className : ""}`}
         >
-          {pokemonType} ({pokemonTypeArr.length})
+          #{pokemonType}({pokemonTypeArr.length})
         </Button>
       ) : null}
     </>

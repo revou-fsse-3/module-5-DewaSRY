@@ -1,32 +1,41 @@
-import { FC, FormHTMLAttributes, PropsWithChildren } from "react";
-import PokemonInput from "@layout/Navbar/components/PokemonInput";
-import SearchButton from "@layout/Navbar/components/SearchButton";
-import DropDown from "@layout/Navbar/components/DropDown";
-import SearchProvider from "@layout/Navbar/provider";
+import { FC, FormEvent, FormHTMLAttributes, PropsWithChildren } from "react";
+import Button, { ButtonTypes } from "@common/Button";
+import { CiSearch } from "react-icons/ci";
+import Input from "@common/FormsUtils/Input";
+import { useRouter } from "next/router";
 
 interface indexProps extends FormHTMLAttributes<HTMLFormElement> {}
 type indexComponents = FC<indexProps> & PropsWithChildren;
 const index: indexComponents = ({ children, ...resProps }) => {
+  const router = useRouter();
+
+  const handelSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formElement = e.target as HTMLFormElement;
+    const pokemonInput = formElement.querySelector(
+      "input[name='name']"
+    ) as HTMLInputElement;
+    router.push("pokemon/" + pokemonInput.value);
+  };
   return (
-    <SearchProvider>
-      <form
-        {...resProps}
-        className={
-          "relative " + ` ${resProps.className ? resProps.className : " "} `
-        }
+    <form
+      onSubmit={handelSubmit}
+      {...resProps}
+      className="flex items-center justify-end "
+    >
+      <Input
+        placeholder="type pokemon here"
+        className="text-xl flex-2"
+        label="name"
+      />
+      <Button
+        ButtonType={ButtonTypes.BaseButton}
+        className={`${resProps.className ? resProps.className : ""}`}
       >
-        <PokemonInput
-          placeholder="type pokemon here"
-          className="text-xl"
-          label="name"
-        />
-        <SearchButton
-          type="submit"
-          className="cursor-pointer absolute right-0 top-0 "
-        />
-      </form>
-      <DropDown className="absolute  max-h-[15rem] overflow-y-auto px-8 rounded-xl bg-white " />
-    </SearchProvider>
+        <CiSearch className="inline-block text-4xl " />
+        <span className="text-lg">Search</span>
+      </Button>
+    </form>
   );
 };
 

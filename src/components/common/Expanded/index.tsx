@@ -23,25 +23,24 @@ const index: indexComponents = ({ children, expended, ...resProps }) => {
   };
 
   return (
-    <Fragment>
-      <div ref={divEl}>
-        <div
-          className={
-            "cursor-pointer outline-none w-full " +
-            `${resProps.className ? resProps.className : ""}`
-          }
-          {...resProps}
-          onClick={handleClick}
-        >
-          {expended}
-        </div>
-        {expanded ? (
-          <Panel handleClose={handleClose()} parent={divEl.current!}>
-            {children}
-          </Panel>
-        ) : null}
+    <div ref={divEl} className="inline-block">
+      <div
+        className={
+          "cursor-pointer outline-none " +
+          `${resProps.className ? resProps.className : ""}`
+        }
+        {...resProps}
+        onClick={handleClick}
+      >
+        {expended}
       </div>
-    </Fragment>
+
+      {expanded && (
+        <Panel handleClose={handleClose()} parent={divEl.current!}>
+          {children}
+        </Panel>
+      )}
+    </div>
   );
 };
 

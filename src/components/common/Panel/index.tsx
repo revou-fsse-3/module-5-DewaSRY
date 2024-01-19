@@ -5,12 +5,7 @@ interface PanelProps extends HTMLAttributes<HTMLDivElement> {
   handleClose: () => void;
 }
 type PanelComponents = FC<PanelProps> & PropsWithChildren;
-const Panel: PanelComponents = ({
-  children,
-  parent,
-  handleClose,
-  ...resProps
-}) => {
+const Panel: PanelComponents = ({ children, parent, handleClose }) => {
   useEffect(() => {
     const handler = (event: MouseEvent) => {
       if (!parent) return;
@@ -23,14 +18,7 @@ const Panel: PanelComponents = ({
       document.removeEventListener("click", handler);
     };
   }, []);
-  return (
-    <div
-      {...resProps}
-      className={`${resProps.className ? resProps.className : ""}`}
-    >
-      {children}
-    </div>
-  );
+  return <>{children}</>;
 };
 
 export default Panel;

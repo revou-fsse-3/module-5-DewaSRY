@@ -1,37 +1,26 @@
 import { FC, HTMLAttributes } from "react";
-import { TypeArray, matherType, PokemonTypes } from "@libs/pokemon/PokemonType";
-import FilterType from "./FilterType";
-import FilterReset from "./FilterReset";
-import FilterFavorite from "./FilterFavorite";
+import FilterTypes from "./FilterTypes";
+// import FilterType from "./FilterTypes";
+import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
+
 import NavigatePokemon from "./NavigatePokemon";
-import Button from "@common/Button";
+import Button, { ButtonTypes } from "@common/Button";
 interface indexProps extends HTMLAttributes<HTMLDivElement> {}
 type indexComponents = FC<indexProps>;
 const index: indexComponents = ({ ...resProps }) => {
   return (
-    <div {...resProps} className={" m-auto "}>
-      <div className="bg-white px-8 pb-2 ">
-        <h3 className="text-lg font-light my-5 underline">Pokemon table </h3>
-        <FilterReset />
-        <FilterFavorite />
-        <Button>
-          <NavigatePokemon addNum={1}>Next pokemon</NavigatePokemon>
-        </Button>
-        <Button>
-          <NavigatePokemon addNum={-1}>Prev pokemon</NavigatePokemon>
-        </Button>
-      </div>
-
-      <div className="bg-white px-8 pb-2 ">
-        <h3 className="text-lg font-light my-5 underline">Pokemon type</h3>
-        {TypeArray.map((type, id) => (
-          <FilterType
-            key={type + id}
-            className={` ${type}  font-bold  text-white`}
-            pokemonType={matherType(type as PokemonTypes)}
-          />
-        ))}
-      </div>
+    <div className="bg-white flex sticky top-0  px-8 pb-2 max-w-[1000px]  m-auto  z-20  py-4 rounded-xl">
+      <Button className="text-3xl" ButtonType={ButtonTypes.BaseButton}>
+        <NavigatePokemon addNum={-1}>
+          <FaAnglesLeft className="" />
+        </NavigatePokemon>
+      </Button>
+      <FilterTypes />
+      <Button className="text-3xl" ButtonType={ButtonTypes.BaseButton}>
+        <NavigatePokemon addNum={1}>
+          <FaAnglesRight />
+        </NavigatePokemon>
+      </Button>
     </div>
   );
 };

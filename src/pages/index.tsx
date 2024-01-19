@@ -9,7 +9,7 @@ import GetAllPokemon, {
 interface HomeProps {
   AllPokemon: GetAllResult[];
 }
-const POKEMON_LIMIT = 50;
+const POKEMON_LIMIT = 20;
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async (
   context

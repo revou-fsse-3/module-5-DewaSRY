@@ -14,7 +14,7 @@ const ButtonReset: ButtonResetComponents = ({ children, ...resProps }) => {
       onClick={handleResetPokemon}
       className={`${resProps.className ? resProps.className : ""}`}
     >
-      ALl Pokemon ({allPokemon.length})
+      #ALl Pokemon({allPokemon.length})
     </Button>
   );
 };

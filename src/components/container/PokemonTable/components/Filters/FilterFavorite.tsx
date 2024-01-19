@@ -25,7 +25,7 @@ const ButtonFavorite: ButtonFavoriteComponents = ({
           ButtonType={ButtonTypes.FiveButton}
           className={`${resProps.className ? resProps.className : ""}`}
         >
-          Favorite ({favoritePokemonNames.length})
+          #Favorite({favoritePokemonNames.length})
         </Button>
       ) : null}
     </Fragment>

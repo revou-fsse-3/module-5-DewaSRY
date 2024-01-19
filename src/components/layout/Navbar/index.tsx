@@ -12,12 +12,12 @@ const index: indexComponents = ({ ...resProps }) => {
       {...resProps}
       className={
         "  bg-white  rounded-xl " +
-        "w-full relative z-20  max-w-[1800px] mx-4 lg:mx-auto my-8  " +
-        "flex flex-wrap xl:flex-nowrap " +
+        "w-full  z-20  max-w-[1800px]  lg:mx-auto my-8  " +
+        "flex flex-wrap xl:flex-nowrap justify-between " +
         `${resProps.className ? resProps.className : ""}`
       }
     >
-      <Link href="/" className="w-[250px] xl:flex-1 ">
+      <Link href="/" className="w-[250px] xl:flex-[3] ">
         <Image
           width={150}
           className="h-[75px] inline-block  "
@@ -26,7 +26,7 @@ const index: indexComponents = ({ ...resProps }) => {
           alt=""
         />
       </Link>
-      <div className="h-full py-4 min-w-[600px] flex-1 xl:flex-[3] ">
+      <div className="h-full py-4 min-w-[600px]  ">
         <FormSearch />
       </div>
     </nav>
