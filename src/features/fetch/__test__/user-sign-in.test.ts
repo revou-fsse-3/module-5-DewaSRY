@@ -27,6 +27,16 @@ function createFetchResponse<T>(data: T) {
   };
 }
 
+/**
+ * this testing suit for testing api end pint you need to comment the
+ * setup test on the vite.config to hit the real end pint
+ *
+ *
+ * i was make some set up to mock the server so if the set up not be remove
+ * the test might not being works
+ *
+ */
+
 describe.skip("user sign in test", () => {
   it("user sign in with token on cookie", async () => {
     // mocks.UserUserSingInMock.caller();

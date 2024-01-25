@@ -1,10 +1,7 @@
 import { describe, expect, vi, it, beforeAll, beforeEach } from "vitest";
 import { render, fireEvent, screen, act, waitFor } from "@libs/reactTesting";
 import "@testing-library/jest-dom";
-import { prettyDOM } from "@testing-library/dom";
-import { CreateCollectionsPayload as Payload } from "@utils/collections.type";
 import CreateForm from "@container/CategoryCreate";
-
 const mocks = vi.hoisted(() => {
   return {
     handle: vi.fn(),
@@ -21,13 +18,10 @@ describe("testing Create Category container", () => {
     );
   });
 
-  it("input in document", () => {
+  it("element button adn input  in document", () => {
+    const button = screen.getByRole("button");
     const input = screen.getByRole("input-name");
     expect(input).toBeInTheDocument();
-  });
-
-  it("button in document", () => {
-    const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
   });
 

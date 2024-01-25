@@ -42,9 +42,16 @@ const AllCollections = {
       created_at: "2024-01-25T01:51:26.000Z",
       updated_at: "2024-01-25T01:51:26.000Z",
     },
+    {
+      created_at: "2024-01-25T05:54:25.172Z",
+      id: "e01c57f7-a0b3-4704-9ce4-57aa14a9d401",
+      is_active: true,
+      name: "testing create",
+      updated_at: "2024-01-25T05:54:25.172Z",
+    },
   ],
   current_page: 1,
-  total_item: 6,
+  total_item: 7,
   total_page: 1,
 };
 export default AllCollections;

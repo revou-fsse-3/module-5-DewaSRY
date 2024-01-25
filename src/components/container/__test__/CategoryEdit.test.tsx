@@ -25,14 +25,14 @@ describe("testing CategoryEdit container", () => {
     );
   });
 
-  it("input in document", () => {
+  it("input and button  in document", () => {
     const input = screen.getByRole("input-name");
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
     expect(input).toBeInTheDocument();
   });
 
-  it(" submit with name is_active ", () => {
+  it("submit with name and is_active ", () => {
     const inputName = screen.getByRole("input-name");
     const inputIsActive = screen.getByRole("input-is_active");
     const button = screen.getByRole("button");

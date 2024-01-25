@@ -1,353 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`testing Create Category container > table Category match with snapshot  1`] = `
-[
-  <table
-    class=""
-    role="main"
-  >
-    <thead
-      class=""
-    >
-      <tr>
-        <th>
-          NO
-        </th>
-        <th
-          colspan="1"
-        >
-          <div
-            class="cursor-pointer select-none"
-          >
-            <span>
-              Last Name
-            </span>
-          </div>
-        </th>
-        <th
-          colspan="1"
-        >
-          <div
-            class="cursor-pointer select-none"
-          >
-            <span>
-              Active Status
-            </span>
-          </div>
-        </th>
-        <th
-          colspan="1"
-        >
-          <div
-            class="cursor-pointer select-none"
-          >
-            <span>
-              Create
-            </span>
-          </div>
-        </th>
-        <th
-          colspan="1"
-        >
-          <div
-            class="cursor-pointer select-none"
-          >
-            <span>
-              Update
-            </span>
-          </div>
-        </th>
-        <th
-          colspan="1"
-        >
-          <div
-            class="cursor-pointer select-none"
-          >
-            <span>
-              Actions
-            </span>
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody
-      class=""
-    >
-      <tr
-        class="
-                bg-gray-100
-                "
-      >
-        <td>
-          1
-           
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            mock halloo apa kabar  loo gory
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span />
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <a
-            href="/collection/update?id=32022cb9-eb8f-4f91-90d5-ddb49b4cb3f0"
-          >
-            Actions
-          </a>
-        </td>
-      </tr>
-      <tr
-        class="
-                bg-gray-200
-                "
-      >
-        <td>
-          2
-           
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            mock halloo apa kabar  loo gory one two
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span />
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <a
-            href="/collection/update?id=6a78f162-af26-4c3d-b9bb-acd5b9534b84"
-          >
-            Actions
-          </a>
-        </td>
-      </tr>
-      <tr
-        class="
-                bg-gray-100
-                "
-      >
-        <td>
-          3
-           
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            mock halloo apa kabar  loo gory one
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span />
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <a
-            href="/collection/update?id=8ffd60fb-538a-4115-83e5-6dc1b9636681"
-          >
-            Actions
-          </a>
-        </td>
-      </tr>
-      <tr
-        class="
-                bg-gray-200
-                "
-      >
-        <td>
-          4
-           
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            asdasfasdasdasdasdafasfasfasfd
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span />
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <a
-            href="/collection/update?id=e008d82c-4cea-4e6c-a110-31c12838366b"
-          >
-            Actions
-          </a>
-        </td>
-      </tr>
-      <tr
-        class="
-                bg-gray-100
-                "
-      >
-        <td>
-          5
-           
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            before Update
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span />
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <a
-            href="/collection/update?id=ec8874da-d514-4a48-a1b4-1def81d6537f"
-          >
-            Actions
-          </a>
-        </td>
-      </tr>
-      <tr
-        class="
-                bg-gray-200
-                "
-      >
-        <td>
-          6
-           
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            before Update
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span />
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <span>
-            Jan 25, 2024
-          </span>
-        </td>
-        <td
-          class="px-3.5 py-2"
-        >
-          <a
-            href="/collection/update?id=ec8874da-d514-4a48-a1b4-1def81d65hhf"
-          >
-            Actions
-          </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>,
-]
-`;
-
 exports[`testing Table Category container > table Category match with snapshot  1`] = `
 [
   <table
@@ -686,6 +338,51 @@ exports[`testing Table Category container > table Category match with snapshot  
         >
           <a
             href="/collection/update?id=ec8874da-d514-4a48-a1b4-1def81d65hhf"
+          >
+            Actions
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="
+                bg-gray-100
+                "
+      >
+        <td>
+          7
+           
+        </td>
+        <td
+          class="px-3.5 py-2"
+        >
+          <span>
+            testing create
+          </span>
+        </td>
+        <td
+          class="px-3.5 py-2"
+        >
+          <span />
+        </td>
+        <td
+          class="px-3.5 py-2"
+        >
+          <span>
+            Jan 25, 2024
+          </span>
+        </td>
+        <td
+          class="px-3.5 py-2"
+        >
+          <span>
+            Jan 25, 2024
+          </span>
+        </td>
+        <td
+          class="px-3.5 py-2"
+        >
+          <a
+            href="/collection/update?id=e01c57f7-a0b3-4704-9ce4-57aa14a9d401"
           >
             Actions
           </a>

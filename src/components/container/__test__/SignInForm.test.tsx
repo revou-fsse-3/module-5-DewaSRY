@@ -37,7 +37,7 @@ describe("testing SingInForm container", () => {
     expect(inputEmail).toBeInTheDocument();
   });
 
-  it("insert  submit  with email and password", () => {
+  it("insert submit  with email and password", () => {
     const inputPassword = screen.getByRole("input-password");
     const inputEmail = screen.getByRole("input-email");
     const button = screen.getByRole("button");

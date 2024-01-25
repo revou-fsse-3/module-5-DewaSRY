@@ -24,10 +24,7 @@ describe("testing SignUpForm container", () => {
       </App>
     );
   });
-  beforeAll(() => {
-    // console.log("pretty DOM");
-    // console.log(prettyDOM());
-  });
+
   it("input in document", () => {
     const inputPassword = screen.getByRole("input-password");
     const inputEmail = screen.getByRole("input-email");

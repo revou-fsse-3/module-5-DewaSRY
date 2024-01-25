@@ -5,6 +5,7 @@ export default async function collectionDel(
   id: string,
   signal?: AbortSignal
 ): Promise<boolean> {
+  console.log(COLLATIONS_URL + "/" + id);
   const request = await fetch(COLLATIONS_URL + "/" + id, {
     method: "DELETE",
     signal,

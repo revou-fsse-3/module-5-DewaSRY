@@ -11,6 +11,7 @@ vi.mock("@libs/cookies", async (importOriginal) => {
     getCookies: mocks.getCookiesMock,
   };
 });
+vi.mock("@fetch/user/user-sign-in");
 
 import createCollections from "@fetch/collections/collection-create";
 import delCollections from "@fetch/collections/collection-del";
@@ -19,6 +20,17 @@ import getALlCollections from "@fetch/collections/collection-get-all";
 import updateCollections from "@fetch/collections/collection-update";
 
 import useLogIn from "@fetch/user/user-login";
+
+/**
+ * this testing suit for testing api end pint you need to comment the
+ * setup test on the vite.config to hit the real end pint
+ *
+ *
+ * i was make some set up to mock the server so if the set up not be remove
+ * the test might not being works
+ *
+ */
+
 describe.skip("fetch collection api end pint", () => {
   let CATEGORY_ID: string;
   beforeAll(async () => {
@@ -57,13 +69,12 @@ describe.skip("fetch collection api end pint", () => {
   it("testing get category by the id", async () => {
     const actual = await getCollections(CATEGORY_ID);
     expect(mocks.getCookiesMock).toHaveBeenCalled();
-
     expect(actual.data.name).toEqual(CATEGORY_FIRST_NAME);
     expect(actual.data.is_active).toEqual(CATEGORY_FIRST_STATUS);
   });
+
   it("testing get all category with new category there", async () => {
     const actual = await getALlCollections();
-
     const findNewCategory = actual.data.find((d) => d.id === CATEGORY_ID);
     expect(mocks.getCookiesMock).toHaveBeenCalled();
     expect(findNewCategory).toBeTruthy();
@@ -78,7 +89,6 @@ describe.skip("fetch collection api end pint", () => {
       name: CATEGORY_SECOND_NAME,
     });
     expect(mocks.getCookiesMock).toHaveBeenCalled();
-
     expect(actual).toBeTruthy();
   });
   it("testing get category by the id  after get update ", async () => {

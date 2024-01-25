@@ -12,7 +12,7 @@ function getStringCamelCaseHaveSpaces(str: string) {
   );
   return getStringCamelCaseHaveSpaces(newString);
 }
-function getUpperCHaseStringAfterSpace(str: string): string {
+function getUpperChaseStringAfterSpace(str: string): string {
   return str
     .split(" ")
     .map((s) => s[0].toLocaleUpperCase() + s.slice(1))
@@ -26,7 +26,7 @@ function getCleanForward(str: string): string {
 }
 
 function getStringCamelChaseToLabel(str: string) {
-  return getUpperCHaseStringAfterSpace(getStringCamelCaseHaveSpaces(str));
+  return getUpperChaseStringAfterSpace(getStringCamelCaseHaveSpaces(str));
 }
 
 function stringComparator(stringOne: string, stringTwo: string) {
@@ -39,7 +39,7 @@ function stringComparator(stringOne: string, stringTwo: string) {
 export {
   getStringCamelCaseHaveSpaces,
   getStringCamelChaseToLabel,
-  getUpperCHaseStringAfterSpace,
+  getUpperChaseStringAfterSpace,
   getCleanForward,
   stringComparator,
 };
