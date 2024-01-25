@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: "jsdom",
+    // environment: "jsdom",
+    environment: "node",
     pool: "forks",
   },
   resolve: {
@@ -24,6 +25,9 @@ export default defineConfig({
       ),
       "@container": fileURLToPath(
         new URL("./src/components/container", import.meta.url)
+      ),
+      "@template": fileURLToPath(
+        new URL("./src/components/template", import.meta.url)
       ),
       "@context": fileURLToPath(
         new URL("./src/components/context", import.meta.url)

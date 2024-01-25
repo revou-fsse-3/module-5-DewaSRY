@@ -3,7 +3,6 @@ import CategoryData from "./CategoryData";
 interface CollectionPageProps extends HTMLAttributes<HTMLElement> {}
 type CollectionPageComponents = FC<CollectionPageProps> & PropsWithChildren;
 import useGetAllCategory from "@features/query/Collections/GetAllCategory";
-// import { useNavigate, useSearchParams } from "react-router-dom";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 const CollectionPage: CollectionPageComponents = ({ ...resProps }) => {

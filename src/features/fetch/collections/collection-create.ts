@@ -1,4 +1,5 @@
-import { COLLATIONS_URL, AUTHORIZATION } from "./index";
+import { getCookies } from "@libs/cookies";
+import { COLLATIONS_URL } from "./index";
 import type { CollectionsProps } from "@features/utils/collections.type";
 export interface CreateCollectionsResult {
   data: CollectionsProps;
@@ -16,7 +17,7 @@ export default async function collectionCreate(
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      ...AUTHORIZATION,
+      Authorization: "Bearer " + getCookies(),
     },
     method: "POST",
   });

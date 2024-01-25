@@ -1,5 +1,5 @@
 import { USER_URL } from "./index";
-import { LogInPayload } from "@features/utils/user.type";
+import type { LogInPayload } from "@features/utils/user.type";
 import { setCookies } from "@libs/cookies";
 import UserSignIn from "./user-sign-in";
 interface loginResponse {
@@ -10,7 +10,7 @@ interface loginResponse {
 
 export default async function userLogin(
   payload: LogInPayload
-): Promise<boolean> {
+): Promise<loginResponse> {
   const request = await fetch(USER_URL + "/login", {
     body: JSON.stringify(payload),
     method: "POST",
@@ -28,5 +28,5 @@ export default async function userLogin(
     await UserSignIn();
   }
 
-  return true;
+  return response;
 }

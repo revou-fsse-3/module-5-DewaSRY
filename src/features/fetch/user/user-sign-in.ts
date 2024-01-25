@@ -2,6 +2,7 @@ import { USER_URL } from "./index";
 import { getCookies } from "@libs/cookies";
 export default async function userSignIn(): Promise<unknown> {
   const currentToken = getCookies();
+
   if (!currentToken) {
     throw Error("failed sign-in ");
   }
@@ -12,6 +13,7 @@ export default async function userSignIn(): Promise<unknown> {
     },
     method: "GET",
   });
+
   if (!request.ok) {
     throw Error("failed to fetch user-sign-in");
   }

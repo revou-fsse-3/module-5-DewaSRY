@@ -1,5 +1,6 @@
 import { UpdateCollectionsProps } from "@features/utils/collections.type";
-import { AUTHORIZATION, COLLATIONS_URL } from "./index";
+import { COLLATIONS_URL } from "./index";
+import { getCookies } from "@libs/cookies";
 
 export type CollectionsUpdatePayload = UpdateCollectionsProps;
 
@@ -13,7 +14,7 @@ export default async function collectionUpdate(
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      ...AUTHORIZATION,
+      Authorization: "Bearer " + getCookies(),
     },
     method: "PUT",
   });

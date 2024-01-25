@@ -1,5 +1,6 @@
 import { CollectionsProps } from "@features/utils/collections.type";
-import { AUTHORIZATION, COLLATIONS_URL } from "./index";
+import { COLLATIONS_URL } from "./index";
+import { getCookies } from "@libs/cookies";
 export interface getCollectionsResult {
   data: CollectionsProps;
 }
@@ -11,7 +12,7 @@ export default async function collectionGetOne(
     signal,
     headers: {
       Accept: "application/json",
-      ...AUTHORIZATION,
+      Authorization: "Bearer " + getCookies(),
     },
   });
 

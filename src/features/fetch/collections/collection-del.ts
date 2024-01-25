@@ -1,4 +1,5 @@
-import { COLLATIONS_URL, AUTHORIZATION } from "./index";
+import { getCookies } from "@libs/cookies";
+import { COLLATIONS_URL } from "./index";
 
 export default async function collectionDel(
   id: string,
@@ -7,7 +8,9 @@ export default async function collectionDel(
   const request = await fetch(COLLATIONS_URL + "/" + id, {
     method: "DELETE",
     signal,
-    headers: AUTHORIZATION,
+    headers: {
+      Authorization: "Bearer " + getCookies(),
+    },
   });
   if (!request.ok) {
     throw Error("failed to fetch collection-del");

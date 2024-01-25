@@ -1,6 +1,6 @@
-import { AUTHORIZATION } from "./index";
+import { getCookies } from "@libs/cookies";
 import { CollectionsProps } from "@features/utils/collections.type";
-
+import { COLLATIONS_URL } from "./index";
 export interface collectionGetAllResponse {
   data: CollectionsProps[];
 }
@@ -9,16 +9,13 @@ export default async function collectionGetAll(
   page = 1,
   signal?: AbortSignal
 ): Promise<collectionGetAllResponse> {
-  const request = await fetch(
-    "https://mock-api.arikmpt.com/api/category?page=" + page,
-    {
-      signal,
-      headers: {
-        Accept: "application/json",
-        ...AUTHORIZATION,
-      },
-    }
-  );
+  const request = await fetch(COLLATIONS_URL + "?page=" + page, {
+    signal,
+    headers: {
+      Accept: "application/json",
+      Authorization: "Bearer " + getCookies(),
+    },
+  });
 
   if (!request.ok) {
     throw Error("failed to fetch collection-get-all");

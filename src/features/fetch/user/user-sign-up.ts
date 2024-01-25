@@ -1,6 +1,6 @@
 import { USER_URL } from "./index";
 
-import { RegisterPayload } from "@features/utils/user.type";
+import type { RegisterPayload } from "@features/utils/user.type";
 import { setUserEmailAndPassword as SaveEmailAndPassword } from "@utils/user.utils";
 import userLogin from "./user-login";
 export default async function userSignUp(
@@ -14,11 +14,19 @@ export default async function userSignUp(
     },
     method: "POST",
   });
+  // const response = await request.json();
+
   if (!request.ok) {
     throw Error("failed to fetch user-sign-up");
   } else {
-    SaveEmailAndPassword(payload);
-    await userLogin(payload);
+    SaveEmailAndPassword({
+      email: payload.email,
+      password: payload.password,
+    });
+    await userLogin({
+      email: payload.email,
+      password: payload.password,
+    });
   }
 
   return true;

@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test:dev": "vitest",
-    "test": "vitest --run"
+    "test": "vitest --config ./vite.config.ts --run"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
