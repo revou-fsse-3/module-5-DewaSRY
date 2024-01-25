@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`testing Table Category container > table Category match with snapshot  1`] = `
+[
+  <button
+    class=" inline-block    my-1 border-2 px-8 text-lg rounded-sm hover:brightness-50   disabled:brightness-10 disabled:border-none  disabled:bg-gray-600 "
+    role="main"
+  >
+     Button 
+  </button>,
+]
+`;

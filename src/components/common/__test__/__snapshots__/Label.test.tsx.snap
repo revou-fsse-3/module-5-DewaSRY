@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`testing Table Category container > table Category match with snapshot  1`] = `
+[
+  <label
+    class="flex flex-col text-left gap-4"
+    for="label"
+    role="main"
+  >
+    <span
+      class=" font-light "
+    >
+      Label
+    </span>
+     
+    halloo
+  </label>,
+]
+`;

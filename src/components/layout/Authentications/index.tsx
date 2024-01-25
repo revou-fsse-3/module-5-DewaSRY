@@ -1,16 +1,6 @@
-// import SingIn from "@page/Authentications/page/SignIn";
-import { NavigationLoader } from "@/features/utils/next";
 import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
-
 import { FC, HTMLAttributes, PropsWithChildren, ReactNode } from "react";
-
-import useIsAuthentications from "@/components/template/Authentication/useIsAuthentications";
-// import dynamic from "next/dynamic";
-// // const AuthenticationsPage = dynamic(() => import("./useIsAuthentications"), {
-// //   ssr: false,
-// // });
 
 import Link from "next/link";
 type AuthenticationsProps = HTMLAttributes<HTMLDivElement> & {
@@ -18,7 +8,6 @@ type AuthenticationsProps = HTMLAttributes<HTMLDivElement> & {
 };
 type AuthenticationsComponents = FC<AuthenticationsProps> & PropsWithChildren;
 const Authentications: AuthenticationsComponents = ({ children, page }) => {
-  // useIsAuthentications();
   return (
     <>
       {children}
@@ -35,16 +24,3 @@ const Authentications: AuthenticationsComponents = ({ children, page }) => {
 };
 
 export default Authentications;
-
-// export const loader: NavigationLoader<null> = async () => {
-//   const currentEmail = localStorage.getItem("email"),
-//     currentPassword = localStorage.getItem("password");
-//   // console.log(currentEmail);
-//   // console.log(currentPassword);
-//   if (!currentEmail || !currentPassword) {
-//     window.history.pushState({}, "", "authentications/sign-up");
-//   } else {
-//     window.history.pushState({}, "", "authentications/sign-in");
-//   }
-//   return null;
-// };

@@ -40,6 +40,7 @@ const SingInForm: SingInFormComponents = ({
           {...getLabelInputProps("email")}
           {...register("email")}
           type="email"
+          role="input-email"
         />
         <p>{errors.email?.message}</p>
       </Label>
@@ -48,6 +49,7 @@ const SingInForm: SingInFormComponents = ({
           {...getLabelInputProps("password")}
           {...register("password")}
           type="password"
+          role="input-password"
         />
         <p>{errors.password?.message}</p>
       </Label>

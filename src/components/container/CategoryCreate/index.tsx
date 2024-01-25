@@ -19,12 +19,14 @@ const CategoryCreate: CategoryCreateComponents = ({
     register,
     handleSubmit: handle,
     formState: { errors },
+    reset,
   } = useForm<CreatePayload>({
     resolver: yupResolver(schema),
   });
 
   const onSubmit: SubmitHandler<CreatePayload> = (payload) => {
     handleCreate(payload);
+    reset();
   };
   return (
     <form
@@ -38,6 +40,7 @@ const CategoryCreate: CategoryCreateComponents = ({
           {...getLabelInputProps("name")}
           {...register("name")}
           type="name"
+          role="input-name"
         />
         <p>{errors.name?.message}</p>
       </Label>

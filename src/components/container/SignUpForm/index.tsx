@@ -43,14 +43,16 @@ const SingUpForm: SingUpFormComponents = ({
           {...getLabelInputProps("name")}
           {...register("name")}
           type="name"
+          role="input-name"
         />
-        <p>{errors.email?.message}</p>
+        <p>{errors.name?.message}</p>
       </Label>
       <Label label="email">
         <input
           {...getLabelInputProps("email")}
           {...register("email")}
           type="email"
+          role="input-email"
         />
         <p>{errors.email?.message}</p>
       </Label>
@@ -59,6 +61,7 @@ const SingUpForm: SingUpFormComponents = ({
           {...getLabelInputProps("password")}
           {...register("password")}
           type="password"
+          role="input-password"
         />
         <p>{errors.password?.message}</p>
       </Label>

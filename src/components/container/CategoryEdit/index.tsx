@@ -32,7 +32,6 @@ const CategoryEdit: CategoryEditComponents = ({
       ...payload,
       id: data.id,
     };
-    console.log(newPayload);
     handleSubmit(newPayload);
   };
   return (
@@ -47,6 +46,7 @@ const CategoryEdit: CategoryEditComponents = ({
           {...getLabelInputProps("name")}
           {...register("name")}
           type="text"
+          role="input-name"
         />
         <p>{errors.name?.message}</p>
       </Label>
@@ -55,6 +55,7 @@ const CategoryEdit: CategoryEditComponents = ({
           {...getLabelInputProps("is_active")}
           {...register("is_active")}
           type="checkbox"
+          role="input-is_active"
         />
         <p>{errors.is_active?.message}</p>
       </Label>

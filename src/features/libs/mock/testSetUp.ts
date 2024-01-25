@@ -15,7 +15,7 @@ const COLLECTION_URL = "https://mock-api.arikmpt.com/api/category";
 const USER_URL = "https://mock-api.arikmpt.com/api/user";
 
 export const restHandlers = [
-  http.get(COLLECTION_URL + "?page=1", () => {
+  http.get(COLLECTION_URL, () => {
     return HttpResponse.json(AllCollections);
   }),
 
