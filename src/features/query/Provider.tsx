@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 const queryClient = new QueryClient();
 import { FC, HTMLAttributes, PropsWithChildren } from "react";
@@ -10,10 +11,10 @@ const Provider: ProviderComponents = ({ children }) => {
   );
 };
 
-type withWrapperComponent = (Component: FC) => FC<ProviderProps>;
-const withWrapper: withWrapperComponent = (Component) => (props) => {
+type withWrapperComponent = (Component: FC) => FC;
+const withWrapper: withWrapperComponent = (Component) => () => {
   return (
-    <Provider {...props}>
+    <Provider>
       <Component />
     </Provider>
   );

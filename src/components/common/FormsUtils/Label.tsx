@@ -17,8 +17,7 @@ const Label: LabelComponent = ({ label, children, ...resProps }) => {
           : `flex flex-col text-left gap-4`
       }`}
     >
-      <span className=" font-light hidden">{CapitalizeLabel}</span>
-      {label}
+      <span className=" font-light ">{CapitalizeLabel}</span>
       {children}
     </label>
   );

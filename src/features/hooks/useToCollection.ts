@@ -1,6 +1,7 @@
-import { useNavigate } from "react-router-dom";
-
+// import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 export default function useToCollections() {
-  const navigate = useNavigate();
-  return () => navigate("/collection");
+  const navigate = useRouter();
+
+  return () => navigate.push("/collection");
 }

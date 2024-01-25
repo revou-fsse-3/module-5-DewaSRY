@@ -13,12 +13,14 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
+      "@/*": ["./src/*"],
       //component
       "@components/*": ["./src/components/*"],
       "@common/*": ["./src/components/common/*"],
       "@layout/*": ["./src/components/layout/*"],
       "@container/*": ["./src/components/container/*"],
       "@context/*": ["./src/components/context/*"],
+      "@template/*": ["./src/components/template/*"],
       //features
       "@features/*": ["./src/features/*"],
       "@libs/*": ["./src/features/libs/*"],
@@ -28,7 +30,7 @@
       "@query/*": ["./src/features/query/*"],
       "@typesUtils/*": ["./src/features/utils/types-utils/*"],
       // page
-      "@page/*": ["./src/page/*"]
+      "@pages/*": ["./src/pages/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

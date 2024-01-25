@@ -1,7 +1,6 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import { CollectionsProps } from "@features/utils/collections.type";
-import CategoryActions from "./CategoryActions";
-
+import Link from "next/link";
 const columnHelper = createColumnHelper<CollectionsProps>();
 const columns = [
   columnHelper.accessor("name", {
@@ -33,7 +32,9 @@ const columns = [
     footer: (props) => props.column.id,
   }),
   columnHelper.accessor("id", {
-    cell: (props) => <CategoryActions id={props.getValue()} />,
+    cell: (props) => (
+      <Link href={`/collection/update?id=${props.getValue()}`}>Actions</Link>
+    ),
     header: () => <span>Actions</span>,
     footer: (props) => props.column.id,
   }),
