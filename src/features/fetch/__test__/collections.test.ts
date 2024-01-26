@@ -20,6 +20,7 @@ import getALlCollections from "@fetch/collections/collection-get-all";
 import updateCollections from "@fetch/collections/collection-update";
 
 import useLogIn from "@fetch/user/user-login";
+import { beforeEach } from "node:test";
 
 /**
  * this testing suit for testing api end pint you need to comment the
@@ -33,13 +34,19 @@ import useLogIn from "@fetch/user/user-login";
 
 describe.skip("fetch collection api end pint", () => {
   let CATEGORY_ID: string;
+  // let USER_TOKEN: string = "";
   beforeAll(async () => {
     const { data } = await useLogIn({
       email: "hallo@email.com",
       password: "123456789",
     });
+
     mocks.getCookiesMock.mockReturnValue(data.token);
   });
+
+  // beforeEach(() => {
+  //   mocks.getCookiesMock.mockReturnValue(USER_TOKEN);
+  // });
   const CATEGORY_FIRST_STATUS = true,
     CATEGORY_FIRST_NAME = "testing create",
     CATEGORY_SECOND_STATUS = false,
@@ -51,6 +58,7 @@ describe.skip("fetch collection api end pint", () => {
     });
     CATEGORY_ID = actual.data.id;
     expect(mocks.getCookiesMock).toHaveBeenCalled();
+
     expect(actual.data.name).toEqual(CATEGORY_FIRST_NAME);
     expect(actual.data.is_active).toEqual(CATEGORY_FIRST_STATUS);
     // expect(actual).toMatchInlineSnapshot(`

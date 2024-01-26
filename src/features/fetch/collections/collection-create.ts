@@ -21,6 +21,8 @@ export default async function collectionCreate(
     },
     method: "POST",
   });
+  console.log("cokie" + getCookies());
+  console.log(getCookies());
 
   if (!request.ok) {
     throw Error("failed to fetch collection-create");

@@ -9,7 +9,16 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     pool: "forks",
-    setupFiles: ["./src/features/libs/mock/testSetUp.ts"],
+    /**
+     *  set up use to mock the traffick while doing testing
+     *  suggest to unComment the setupFile so the testing
+     *  does't hit the real api and mess the data base
+     */
+
+    // setupFiles: ["./src/features/libs/mock/testSetUp.ts"],
+    coverage: {
+      reporter: ["text", "json", "html"],
+    },
   },
   resolve: {
     alias: {
