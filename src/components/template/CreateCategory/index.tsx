@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes, PropsWithChildren } from "react";
-import useCreateCategory from "@query/Collections/CreateCategory";
+import useCreateCategory from "@/features/query/Collections/CreateCategory";
 import CategoryCreate from "@container/CategoryCreate";
 import Button from "@common/Button";
 import useToCollections from "@hooks/useToCollection";

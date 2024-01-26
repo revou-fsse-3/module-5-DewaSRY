@@ -4,7 +4,7 @@ import FetchAllCategory, {
   collectionGetAllResponse,
 } from "@fetch/collections/collection-get-all";
 import { CollectionsProps } from "@utils/collections.type";
-export default function useGetAllCategory(page: number) {
+export default function useGetAllCategory(page = 1) {
   const query = useQuery<collectionGetAllResponse, Error>({
     queryKey: ["get-all-collections"],
     queryFn: ({ signal }) => FetchAllCategory(page, signal),

@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, PropsWithChildren } from "react";
 import { useSearchParams } from "next/navigation";
 import UpdateCategory from "./UpdateCategory";
-import useGetCategory from "@query/Collections/GetCategory";
+import useGetCategory from "@/features/query/Collections/GetCategory";
 type UpdatePageProps = HTMLAttributes<HTMLDivElement>;
 type UpdatePageComponents = FC<UpdatePageProps> & PropsWithChildren;
 const UpdatePage: UpdatePageComponents = () => {

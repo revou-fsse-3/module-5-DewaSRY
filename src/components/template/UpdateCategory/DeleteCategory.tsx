@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes, PropsWithChildren } from "react";
 import Button from "@common/Button";
-import useDelCategory from "@query/Collections/DeleteCategory";
+import useDelCategory from "@/features/query/Collections/DeleteCategory";
 import useToCollections from "@features/hooks/useToCollection";
 type DeleteCategoryProps = HTMLAttributes<HTMLDivElement> & {
   id: string;

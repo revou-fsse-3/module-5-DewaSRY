@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, PropsWithChildren } from "react";
 import { CollectionsProps } from "@utils/collections.type";
 import EditCategory from "@/components/container/CategoryEdit";
-import useCategoryEdit from "@query/Collections/UpdateCategory";
+import useCategoryEdit from "@/features/query/Collections/UpdateCategory";
 import useToCollections from "@features/hooks/useToCollection";
 import Button from "@common/Button";
 import DeleteCategory from "./DeleteCategory";

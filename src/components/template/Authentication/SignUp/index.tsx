@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, PropsWithChildren } from "react";
 import SignUpForm from "@container/SignUpForm";
 import Button from "@common/Button";
-import useUserSingUp from "@query/user/UserRegister";
+import useUserSingUp from "@/features/query/user/UserRegister";
 import useToCollections from "@hooks/useToCollection";
 
 interface SignUpPageProps extends HTMLAttributes<HTMLDivElement> {}

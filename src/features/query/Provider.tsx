@@ -1,7 +1,15 @@
 /* eslint-disable react/display-name */
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-const queryClient = new QueryClient();
 import { FC, HTMLAttributes, PropsWithChildren } from "react";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      // ✅ turns retries off
+      retry: false,
+    },
+  },
+});
 
 interface ProviderProps extends HTMLAttributes<HTMLDivElement> {}
 type ProviderComponents = FC<ProviderProps> & PropsWithChildren;
@@ -19,5 +27,6 @@ const withWrapper: withWrapperComponent = (Component) => () => {
     </Provider>
   );
 };
+
 export default Provider;
 export { queryClient, withWrapper };
